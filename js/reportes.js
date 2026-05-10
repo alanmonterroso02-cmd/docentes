@@ -69,7 +69,7 @@ window.cargarDatos = async function () {
         `;
     });
 
-
+    listaPagos.innerHTML = html;
 };
 
 /* =====================================
