@@ -87,12 +87,12 @@ window.registrarPago = async function () {
     }
 
     if (!contenedor) {
-        alert("Seleccione una categoría");
+        alert("Seleccione una Materia");
         return;
     }
 
     if (!monto || Number(monto) <= 0) {
-        alert("Ingrese un monto válido");
+        alert("Ingrese un punteo válido");
         return;
     }
 
@@ -105,12 +105,12 @@ window.registrarPago = async function () {
             fecha: serverTimestamp()
         });
 
-        alert("Cobro guardado correctamente en: " + contenedor);
+        alert("Punteo guardado correctamente en: " + contenedor);
 
         document.getElementById("monto").value = "";
 
     } catch (error) {
         console.error(error);
-        alert("Error al guardar el cobro");
+        alert("Error al guardar el Punteo");
     }
 };
