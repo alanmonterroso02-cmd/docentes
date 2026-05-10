@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <h1>Promoción 2026</h1>
+        <h2>Panel de docentes</h2>
+
+        <div class="menu-admin">
+
+            <a href="scan.html">
+                <button>Escanear QR</button>
+            </a>
+
+            <a href="categorias.html">
+                <button>Añadir Materia</button>
+            </a>
+
+            <a href="scanner.html">
+                <button>Generar QR</button>
+            </a>
+
+            <a href="historial.html">
+                <button>Ver historial de punteo</button>
+            </a>
+
+
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+
+        </div>
+
+    </div>
+    <!-- login obligatorio -->
+    <script>
+    // Verificar si inició sesión
+    if (localStorage.getItem("logueado") !== "true") {
+        alert("Debes iniciar sesión primero");
+        window.location.href = "index.html";
+    }
+    </script>
+    <script>
+        function cerrarSesion() {
+            window.location.href = "index.html";
+            localStorage.removeItem("logueado");
+        }
+    </script>
+
+</body>
+</html>

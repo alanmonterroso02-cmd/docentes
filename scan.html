@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanear QR - Promoción 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Escáner QR</h1>
+    <h2>Promoción 2026</h2>
+
+    <!-- Escáner QR -->
+    <div id="reader" style="width:300px;"></div>
+
+    <h3>Resultado:</h3>
+    <div id="resultado"></div>
+
+    <br>
+
+    <!-- Categorías desde Firebase -->
+    <select id="contenedor" required>
+        <option value="">Seleccione una categoría</option>
+    </select>
+
+    <br><br>
+
+    <!-- Monto -->
+    <input
+        type="number"
+        id="monto"
+        placeholder="Ingresar punteo"
+        required
+    >
+
+    <br><br>
+
+    <!-- Botón -->    
+    <button onclick="registrarPago()">
+        Registrar punteo
+    </button>
+    <!-- login obligatorio -->
+    <script>
+    // Verificar si inició sesión
+    if (localStorage.getItem("logueado") !== "true") {
+        alert("Debes iniciar sesión primero");
+        window.location.href = "index.html";
+    }
+    </script>
+    <!-- Librería QR -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <!-- JS principal -->
+    <script type="module" src="js/pagos.js"></script>
+
+</body>
+</html>
