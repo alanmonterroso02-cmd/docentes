@@ -91,7 +91,7 @@ window.registrarPago = async function () {
         return;
     }
 
-    if (!monto || Number(monto) <= 0) {
+    if (!monto) {
         alert("Ingrese un punteo válido");
         return;
     }
